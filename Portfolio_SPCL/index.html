@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Kajal Jagtap.</div>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Add these lines in the head section, before closing </head> -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+<!-- Update your hero section -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+            <p>Hello, It's Me</p>
+            <h1>Kajal Jagtap</h1>
+            <h2>And I'm a <span class="auto-type"></span></h2>
+            
+            <a href="#about" class="btn" data-aos="fade-up" data-aos-delay="1000">More About Me</a>
+        </div>
+        
+    </div>
+</section>
+
+<!-- Add this before closing </body> -->
+<script>
+    AOS.init();
+    
+    var typed = new Typed(".auto-type", {
+        strings: ["Data Analyst"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true
+    });
+</script>
+<section id="about" class="about">
+    <div class="about-content">
+        <div class="about-image">
+            <img src="kajal jagtap photo 123.jpeg" alt="Profile">
+        </div>
+        <div class="about-text">
+            <h2>About <span class="highlight">Me</span></h2>
+            <h3>Data Analyst!</h3>
+            <p>Hello! I'm Kajal Jagtap, I am an aspiring Data Analyst with a strong passion for transforming raw data into meaningful insights that support smart decision-making. Currently pursuing my Bachelor of Computer Applications (BCA), I have developed a solid foundation in data analysis, problem-solving, and analytical thinking. I enjoy working with data to identify patterns, uncover trends, and convert complex information into clear, understandable visual insights.
+
+I have gained hands-on experience in data handling, data cleaning, and data visualization through academic projects, certifications, and practical learning. My interest lies in understanding how data can be used to solve real-world problems, improve efficiency, and support strategic planning in organizations. I am particularly fascinated by how data-driven approaches can enhance business performance, predict outcomes, and guide innovation.
+
+As a continuous learner, I actively explore new tools, technologies, and analytical techniques to improve my skills and stay updated with industry trends..</p>
+             
+        </div>
+    </div>
+    <section id="skills" class="skills">
+        <h2>My <span class="highlight">Skills</span></h2>
+        
+        <div class="skills-container">
+            <!-- Technical Skills -->
+            <div class="technical-skills" data-aos="fade-right" data-aos-duration="1000">
+                <h3>Technical Skills</h3>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <i class="fab fa-html5"></i>
+                        <span>Data Analysis and Data Cleaning, Visualization</span>
+                    </div>
+                    <div class="progress-line" data-percent="90%">
+                        <span style="width: 90%"></span>
+                    </div>
+                </div>
+    
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>Python,Pandas,NumPy,Matplotlib</span>
+                    </div>
+                    <div class="progress-line" data-percent="80%">
+                        <span style="width: 85%"></span>
+                    </div>
+                </div>
+    
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <i class="fab fa-js"></i>
+                        <span>HTML,CSS,JavaScript</span>
+                    </div>
+                    <div class="progress-line" data-percent="75%">
+                        <span style="width: 65%"></span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Professional Skills -->
+            <div class="professional-skills" data-aos="fade-left" data-aos-duration="1000">
+                <h3>Professional Skills</h3>
+                <div class="skill-circles">
+                    <div class="circle-progress">
+                        <div class="outer">
+                            <div class="inner">
+                                <div class="number">90%</div>
+                            </div>
+                        </div>
+                        <span class="skill-title">Creativity</span>
+                    </div>
+    
+                    <div class="circle-progress">
+                        <div class="outer">
+                            <div class="inner">
+                                <div class="number">80%</div>
+                            </div>
+                        </div>
+                        <span class="skill-title">Communication</span>
+                    </div>
+    
+                    <div class="circle-progress">
+                        <div class="outer">
+                            <div class="inner">
+                                <div class="number">75%</div>
+                            </div>
+                        </div>
+                        <span class="skill-title">Problem Solving</span>
+                    </div>
+    
+                    <div class="circle-progress">
+                        <div class="outer">
+                            <div class="inner">
+                                <div class="number">85%</div>
+                            </div>
+                        </div>
+                        <span class="skill-title">Teamwork</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
