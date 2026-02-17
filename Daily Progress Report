@@ -22,3 +22,41 @@ Next Plan:
 
 Apply CSS styling and improve visual design.
 Complete remaining sections and enhance responsiveness.
+
+Day 02 Progress Report
+
+Date: 17/02/26
+Project Name: Personal Portfolio Website
+Updated By: Kajal Jagtap
+
+Work Completed:
+
+Today, I updated the HTML and CSS files to enhance the design, structure, and user experience of the portfolio website.
+
+HTML Updates:
+
+Added AOS (Animate On Scroll) library for smooth scroll animations.
+Integrated Typed.js for dynamic text typing effects.
+Created a fully structured Skills Section including:
+Technical skills with animated progress bars.
+Professional skills with circular progress indicators.
+Applied animation effects to skill sections using AOS attributes.
+
+CSS Updates:
+
+Defined global color variables for consistent theme design.
+Improved layout styling for navbar, hero section, and images.
+Added glow and floating animation effects for profile images.
+Styled skill progress bars and circular indicators.
+Implemented responsive design for mobile view.
+Enhanced overall visual appearance with better spacing, fonts, and transitions.
+
+Outcome:
+
+The website now has smooth animations, an interactive skills display, improved styling, and a more professional user interface.
+
+ Next Plan:
+
+Complete remaining sections of the portfolio.
+Improve responsiveness for all screen sizes.
+Add more interactive elements and content.
