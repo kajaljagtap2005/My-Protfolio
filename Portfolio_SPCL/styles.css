@@ -133,8 +133,6 @@ body {
     box-shadow: 0 0 20px var(--primary-color);
 }
 
- 
-
 .hero-image img {
     width: 400px;
     height: 450px;
@@ -173,7 +171,6 @@ body {
     .hero-image {
         order: -1;
     }
-    
     .hero-image img {
         max-width: 75px;
         margin: 0 auto;
@@ -375,3 +372,4 @@ html {
 }
 
  
+
