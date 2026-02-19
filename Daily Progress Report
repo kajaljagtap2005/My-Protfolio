@@ -79,3 +79,29 @@ Improved overall visual design and interactivity.
 
 Outcome:
 The portfolio now displays projects in a structured and visually appealing way with smooth animations and improved user interaction.
+
+Day 04 Progress Report
+
+Date: 19/02/26
+Work Completed:
+
+Today, the Resume section was added to the portfolio website and its design was improved with styling and animations.
+
+HTML Updates:
+
+Created a structured Resume section.
+Added Education details, Work Experience, and Digital Skills.
+Included Certifications and Language Skills with level indicators.
+Added links and icons for better presentation.
+Applied animation effects for smooth display.
+
+CSS Updates:
+
+Styled the Resume layout with two columns.
+Added hover effects and card styling for resume sections.
+Designed skill lists and language level indicators.
+Added animations for smooth content appearance.
+Improved responsiveness for smaller screens.
+
+Outcome:
+The portfolio now has a complete Resume section with proper structure, styling, and animations, making the website look more professional and organized.
