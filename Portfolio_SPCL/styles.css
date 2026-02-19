@@ -371,5 +371,278 @@ html {
     animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
 }
 
- 
+ .skill-circles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.circle-progress {
+    text-align: center;
+}
+
+.outer {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(255,255,255,0.05);
+    margin: 0 auto;
+}
+
+.inner {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                inset -4px -4px 6px -1px rgba(255,255,255,0.05);
+}
+
+.number {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.skill-title {
+    display: block;
+    margin-top: 15px;
+    color: var(--text-color);
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+/* Add this to your existing CSS for the circular progress animation */
+.circle-progress {
+    position: relative;
+}
+
+.circle-progress::before {
+    content: '';
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: conic-gradient(var(--primary-color) var(--percent), transparent 0);
+    animation: circle-fill 1.5s ease forwards;
+}
+
+@keyframes circle-fill {
+    from {
+        --percent: 0%;
+    }
+    to {
+        --percent: var(--target-percent);
+    }
+}
+
+
+.resume {
+    min-height: 100vh;
+    padding: 100px 10%;
+    background: var(--dark-bg);
+}
+
+.resume-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.resume-section {
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(var(--primary-color-rgb), 0.1);
+    transition: 0.3s;
+}
+
+.resume-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(var(--primary-color-rgb), 0.2);
+}
+
+.resume-section h3 {
+    color: var(--primary-color);
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.resume-item {
+    padding: 20px;
+    border-left: 2px solid var(--primary-color);
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.resume-item::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    left: -9px;
+    top: 0;
+}
+
+.resume-item h4 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.resume-item h5 {
+    color: var(--primary-color);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.resume-item p {
+    color: #ededed;
+    margin-bottom: 10px;
+}
+
+.resume-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.resume-item ul li {
+    color: #ededed;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.resume-item ul li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.language-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.language-item {
+    text-align: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.language-item:hover {
+    transform: translateY(-5px);
+    background: rgba(var(--primary-color-rgb), 0.1);
+}
+
+@media (max-width: 768px) {
+    .resume-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Add animation for skill bars */
+.resume-item {
+    animation: slideIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/* Add these new styles for the enhanced resume section */
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.skills-list li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.lang-level {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.level-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.level-dot.active {
+    background: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.language-item {
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.language-item:hover {
+    transform: translateY(-5px);
+    background: rgba(var(--primary-color-rgb), 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.college-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.college-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+
 
