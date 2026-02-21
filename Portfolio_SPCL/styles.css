@@ -782,5 +782,30 @@ html {
 .project-links {
     margin-top: 20px;
 }
+.project-links {
+    margin-top: 20px;
+}
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: rgba(var(--primary-color-rgb), 0.2);
+    transition: 0.3s;
+}
+
+.github-link:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+}
 
 
