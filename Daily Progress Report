@@ -131,3 +131,36 @@ Cleaned and organized CSS code.
 Outcome:
 The portfolio website design and structure are now complete and properly organized.
 The website looks clean, structured, and ready for final functionality integration.
+
+ Day 06 Progress Report
+
+Date: 21/02/26
+Work Completed:
+
+Today, the final functionality of the portfolio website was implemented using JavaScript.
+Interactive features were added and the website behavior was tested for smooth performance.
+
+HTML Updates:
+
+Reviewed HTML structure to connect JavaScript functionality properly.
+Added required IDs and classes for JavaScript interaction.
+Checked section linking and navigation behavior.
+
+CSS Updates:
+
+Minor styling adjustments for interactive elements.
+Improved button hover effects and transitions.
+Ensured responsive behavior after adding functionality.
+
+JavaScript Updates:
+
+Created a separate JavaScript file and moved all scripts into it.
+Added interactivity such as navigation behavior and dynamic elements.
+Tested functionality and fixed minor errors.
+Organized and cleaned the JavaScript code for better readability.
+
+Outcome:
+
+The portfolio website is now fully functional with interactive features.
+All scripts are properly organized, and the website works smoothly across devices.
+The project is ready for final review and deployment.
