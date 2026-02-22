@@ -330,6 +330,53 @@ As a continuous learner, I actively explore new tools, technologies, and analyti
             </div>
         </div>
 
+         <!-- Right side - the form -->
+  <div class="contact-right">
+    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+
+      <!-- === Very important - paste your Access Key here === -->
+      <input type="hidden" name="access_key" value="403be03a-3ed9-41a5-8d4f-afb8c118e523">
+
+      <!-- Optional: better reply-to and subject -->
+      <input type="hidden" name="from_name" value="Portfolio Contact Form">
+      <input type="hidden" name="subject" value="New message from portfolio">
+
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" name="name" id="name" placeholder="Your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="your@email.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" name="subject_user" id="subject" placeholder="Project / Job / Question" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="5" placeholder="Hello Kajal, I would like to..." required></textarea>
+      </div>
+
+      <button type="submit" id="submitBtn">Send Message</button>
+
+      <!-- Success message (hidden by default) -->
+      <div class="success-msg" id="successMsg" style="display: none;">
+        ✓ Message sent successfully!<br>Thank you — I'll get back to you soon.
+      </div>
+
+      <!-- Error message (hidden by default) -->
+      <div class="error-msg" id="errorMsg" style="display: none;">
+        Sorry, something went wrong. Please try again.
+      </div>
+    </form>
+  </div>
+</div>
+
+
         
     </div>
 </section>
@@ -338,6 +385,7 @@ As a continuous learner, I actively explore new tools, technologies, and analyti
 
 
             
+
 
 
 
