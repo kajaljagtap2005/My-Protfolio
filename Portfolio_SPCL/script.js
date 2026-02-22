@@ -1,4 +1,3 @@
-// Add this to initialize the circular progress bars
 document.addEventListener('DOMContentLoaded', function() {
     const circles = document.querySelectorAll('.circle-progress');
     circles.forEach(circle => {
@@ -6,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
         circle.style.setProperty('--target-percent', percent);
     });
 });
+
+
 
 document.getElementById("contactForm").addEventListener("submit", function(e) {
   e.preventDefault(); // stop normal redirect
@@ -42,4 +43,32 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     btn.textContent = "Try Again";
     btn.disabled = false;
   });
+});// --- MOBILE MENU TOGGLE LOGIC ---
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.querySelector('.menu-icon i');
+    const navLinks = document.getElementById('nav-links');
+    const links = document.querySelectorAll('#nav-links li a');
+
+    // Toggle menu when clicking the hamburger icon
+    menuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        
+        // Change icon from bars to an 'X'
+        if (navLinks.classList.contains('active')) {
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-times');
+        } else {
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
+        }
+    });
+
+    // Automatically close the menu when a link is clicked
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
+        });
+    });
 });
