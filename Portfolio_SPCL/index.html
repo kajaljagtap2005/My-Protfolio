@@ -6,26 +6,68 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">My Portfolio</div>
-        <ul>
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#project">Project</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<nav class="navbar">
+    <div class="logo">My Portfolio</div>
+    
+    <div class="menu-icon">
+        <i class="fas fa-bars"></i>
+    </div>
 
-    <! </head> -->
+    <ul id="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuIcon = document.querySelector('.menu-icon');
+        const menuIconIcon = document.querySelector('.menu-icon i');
+        const navLinks = document.getElementById('nav-links');
+        const links = document.querySelectorAll('#nav-links li a');
+
+        if (menuIcon && navLinks) {
+            // Click hamburger to open/close menu
+            menuIcon.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                
+                // Swap between bars and X icon
+                if (navLinks.classList.contains('active')) {
+                    menuIconIcon.classList.remove('fa-bars');
+                    menuIconIcon.classList.add('fa-times');
+                } else {
+                    menuIconIcon.classList.remove('fa-times');
+                    menuIconIcon.classList.add('fa-bars');
+                }
+            });
+
+            // Close menu when a link is clicked
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuIconIcon.classList.remove('fa-times');
+                    menuIconIcon.classList.add('fa-bars');
+                });
+            });
+        } else {
+            console.error("Menu icon or nav-links not found in HTML!");
+        }
+    });
+</script>
+
+    <!-- Add these lines in the head section, before closing </head> -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
-<!-- Update hero section -->
+<!-- Update your hero section -->
 <section id="home" class="hero">
     <div class="hero-content">
         <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
@@ -39,7 +81,7 @@
     </div>
 </section>
 
-<!-- </body> -->
+<!-- Add this before closing </body> -->
 <script>
     AOS.init();
     
@@ -53,7 +95,7 @@
 <section id="about" class="about">
     <div class="about-content">
         <div class="about-image">
-            <img src="kajal jagtap photo 123.jpg.jpeg" alt="Profile">
+            <img src="kajal jagtap photo 123.jpeg" alt="Profile">
         </div>
         <div class="about-text">
             <h2>About <span class="highlight">Me</span></h2>
@@ -147,6 +189,7 @@ As a continuous learner, I actively explore new tools, technologies, and analyti
             </div>
         </div>
     </section>
+
     <section id="project" class="project">
     <h2 class="section-title" data-aos="fade-down">My <span class="highlight">Projects</span></h2>
     
@@ -198,7 +241,7 @@ As a continuous learner, I actively explore new tools, technologies, and analyti
         </div>
     </div>
 </section>
-    
+
 <section id="resume" class="resume">
     <h2 class="section-title" data-aos="fade-down">My <span class="highlight">Resume</span></h2>
     
@@ -290,6 +333,7 @@ As a continuous learner, I actively explore new tools, technologies, and analyti
                 </div>
             </div>
 
+
             <div class="resume-section">
                 <h3><i class="fas fa-comments"></i> Communication Skills</h3>
                 <div class="resume-item">
@@ -330,10 +374,11 @@ As a continuous learner, I actively explore new tools, technologies, and analyti
             </div>
         </div>
 
-         <!-- Right side - the form -->
+        <!-- Right side - the form -->
   <div class="contact-right">
     <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
 
+      <!-- === Very important - paste your Access Key here === -->
       <input type="hidden" name="access_key" value="403be03a-3ed9-41a5-8d4f-afb8c118e523">
 
       <!-- Optional: better reply-to and subject -->
@@ -375,19 +420,11 @@ As a continuous learner, I actively explore new tools, technologies, and analyti
   </div>
 </div>
 
-
         
     </div>
 </section>
 
-            
-
-
-            
 
 
 
-
-
-
-
+ 
