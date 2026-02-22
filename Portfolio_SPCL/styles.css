@@ -133,6 +133,8 @@ body {
     box-shadow: 0 0 20px var(--primary-color);
 }
 
+ 
+
 .hero-image img {
     width: 400px;
     height: 450px;
@@ -171,6 +173,7 @@ body {
     .hero-image {
         order: -1;
     }
+    
     .hero-image img {
         max-width: 75px;
         margin: 0 auto;
@@ -195,6 +198,7 @@ body {
     position: relative;
     max-width: 400px;
 }
+
 .about-image img {
     width: 100%;
     border-radius: 50%;
@@ -297,6 +301,7 @@ html {
     background: var(--primary-color);
     transition: 0.3s;
 }
+
 .navbar ul li a:hover::after {
     width: 100%;
 }
@@ -371,7 +376,7 @@ html {
     animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
 }
 
- .skill-circles {
+.skill-circles {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
@@ -782,9 +787,7 @@ html {
 .project-links {
     margin-top: 20px;
 }
-.project-links {
-    margin-top: 20px;
-}
+
 .github-link {
     display: inline-flex;
     align-items: center;
@@ -807,6 +810,7 @@ html {
         grid-template-columns: 1fr;
     }
 }
+
 
 /* ── FORM ── */
 .contact-right {
@@ -889,15 +893,75 @@ textarea {
   font-weight: 500;
 }
 
-/* Mobile */
-@media (max-width: 800px) {
-  .contact-wrapper {
-    flex-direction: column;
-    gap: 50px;
-  }
-  .contact-right {
-    padding: 30px;
-  }
+/* --- MOBILE MENU STYLES --- */
+
+/* Hide the hamburger icon on desktop */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 1000;
 }
 
+/* --- MOBILE RESPONSIVE FIXES --- */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    color: var(--primary-color);
+    cursor: pointer;
+    z-index: 1000;
+}
 
+@media (max-width: 768px) {
+    /* Show Hamburger Menu */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Style the slide-out menu */
+    #nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hides the menu off the right side */
+        width: 250px;
+        height: 100vh;
+        background: var(--dark-bg);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.4s ease;
+        z-index: 999;
+    }
+
+    /* This class slides the menu in */
+    #nav-links.active {
+        right: 0;
+    }
+
+    #nav-links li {
+        margin: 25px 0;
+    }
+
+    #nav-links li a {
+        margin-left: 0;
+        font-size: 20px;
+    }
+
+    /* Fix the tiny 75px Hero Image */
+    .hero-image img {
+        max-width: 250px; 
+        width: 100%;
+        height: auto;
+    }
+
+    /* Fix the squished Skills section */
+    .skills-container {
+        grid-template-columns: 1fr; 
+        gap: 30px;
+    }
+
+    .skill-circles {
+        grid-template-columns: 1fr; 
+    }
+}
